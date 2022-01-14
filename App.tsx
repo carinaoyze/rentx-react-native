@@ -13,7 +13,7 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { ThemeProvider } from 'styled-components';
-import { CarDetails } from './src/screens/CarDetails';
+import { ScheduleComplete } from './src/screens/ScheduleComplete';
 import theme from './src/styles/theme';
 
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CarDetails />
+      <ScheduleComplete />
     </ThemeProvider>
   )
 }
