@@ -11,6 +11,8 @@ export const Container = styled(RectButton)`
 
     justify-content: center;
     align-items: center;
+
+   
 `;
 
 export const Title = styled.Text`

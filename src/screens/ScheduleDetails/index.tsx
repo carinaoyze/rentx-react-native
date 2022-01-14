@@ -40,8 +40,15 @@ RentalPriceTotal
 import { RFValue } from 'react-native-responsive-fontsize';
 import { ColorPropType } from 'react-native';
 import theme from '../../styles/theme';
+import { useNavigation } from '@react-navigation/native';
 
 export function ScheduleDetails(){
+
+    const navigation = useNavigation<any>();
+
+    function handleConfirm(){
+       navigation.navigate('ScheduleComplete')
+   }
  return(
   <Container>
       <Header>
@@ -100,7 +107,7 @@ export function ScheduleDetails(){
           </RentalPrice>
       </Content>
       <Footer>
-          <Button title="Confirmar" />
+          <Button title="Alugar agora" color={theme.colors.success} onPress={handleConfirm}/>
       </Footer>
   </Container>
  );

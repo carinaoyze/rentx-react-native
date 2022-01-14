@@ -9,12 +9,24 @@ import { Container,
     Message,
     Footer } from './styles';
 import { ConfirmButton } from '../../components/ConfirmButton';
+import { StatusBar } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 
 export function ScheduleComplete(){
     const {width} = useWindowDimensions();
+
+    const navigation = useNavigation<any>();
+
+    function handleConfirm(){
+       navigation.navigate('Home')
+   }
     return(
         <Container>
+            <StatusBar barStyle='light-content'
+            translucent
+            backgroundColor='transparent' 
+            />
             <LogoSvg width={width} />
             <Content>
                 <DoneSvg width={80} height={80} />
@@ -26,7 +38,7 @@ export function ScheduleComplete(){
                 </Message>
             </Content>
             <Footer>
-                <ConfirmButton title="OK" />
+                <ConfirmButton title="OK" onPress={handleConfirm} />
             </Footer>
         </Container>
     );

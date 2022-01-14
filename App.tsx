@@ -13,8 +13,9 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { ThemeProvider } from 'styled-components';
-import { ScheduleComplete } from './src/screens/ScheduleComplete';
+import { Routes } from './src/routes';
 import theme from './src/styles/theme';
+import 'react-native-gesture-handler';
 
 export default function App() {
 
@@ -34,7 +35,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ScheduleComplete />
+      <Routes />
     </ThemeProvider>
   )
 }
